@@ -1,0 +1,60 @@
+version: "3.8"
+# scripts: 'docker compose stop', 'docker compose up'
+# creates dockerized mysql container with populated db burger_app
+
+services:
+  web:
+    build:
+      context: ./frontend
+    environment:
+      # this is needed for hot reload (at least in windows)
+      - CHOKIDAR_USEPOLLING=true
+
+    ports:
+      - 5174:5174
+
+    volumes:
+      - .:/app
+      - react-burger:/app/node_modules
+
+    depends_on:
+      - api
+
+  api:
+    build:
+      context: ./backend
+
+    ports:
+      - 5500:5500
+
+    environment:
+      # this is needed for hot reload (at least in windows)
+      - CHOKIDAR_USEPOLLING=true
+
+    volumes:
+      - .:/app
+      - express-burger:/app/node_modules
+
+    networks:
+      - mynetwork
+
+    depends_on:
+      mysql-db:
+        condition: service_healthy
+
+  mysql-db:
+    image: mysql:8.3
+
+    restart: always
+
+    ports:
+      - 3307:3306
+
+    networks:
+      - mynetwork
+
+    volumes:
+      # this script only runs when the container is first created
+      - ./src/database/schema/script.sql:/docker-entrypoint-initdb.d/0_script.sql
+      # persistence of table data inbetween container creation and deletion
+      - db-data:/var/lib/msql
