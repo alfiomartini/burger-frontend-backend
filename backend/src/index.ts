@@ -17,4 +17,6 @@ app.all("*", (req: Request, res: Response) =>
   res.send("You have tried reaching a route that does not exist"),
 );
 
-app.listen(PORT, () => console.log(`Server running on port: http://localhost:${PORT}`));
+app.listen(PORT, () =>
+  console.log(`Node/express server running on port: http://localhost:${PORT}`),
+);
