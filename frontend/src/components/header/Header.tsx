@@ -4,7 +4,7 @@ import styled from "styled-components";
 export function Header() {
   return (
     <Navbar>
-      <Logo to="/">Burger World</Logo>
+      <Logo to="/">Burger Grill</Logo>
       <NavbarItems>
         <Link to="/burgers">Burgers</Link>
         <Link to="/ingredients">Ingredients</Link>
