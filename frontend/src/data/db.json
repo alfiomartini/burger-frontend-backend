@@ -1,0 +1,237 @@
+{
+  "burger": [
+    {
+      "id": "0",
+      "name": "Standard Burger",
+      "description": "A mouth-watering honest beef burger",
+      "ingredients": [
+        {
+          "id": "8",
+          "description": "grams",
+          "name": "beef",
+          "quantity": 150
+        },
+        {
+          "id": "9",
+          "description": "grams",
+          "name": "cheese",
+          "quantity": 20
+        },
+        {
+          "id": "13",
+          "description": "grams",
+          "name": "mustard",
+          "quantity": 20
+        },
+        {
+          "id": "1",
+          "description": "grams",
+          "name": "pickles",
+          "quantity": 30
+        },
+        {
+          "id": "6",
+          "description": "grams",
+          "name": "lettuce",
+          "quantity": 20
+        },
+        {
+          "id": "3",
+          "description": "units",
+          "name": "bun",
+          "quantity": 2
+        }
+      ]
+    },
+    {
+      "id": 1,
+      "name": "Chicken Burger",
+      "description": "A chicken sandwich is a sandwich that typically consists of boneless, skinless chicken breast or thigh, served between slices of bread, on a bun",
+      "ingredients": [
+        {
+          "id": "3",
+          "description": "units",
+          "name": "bun",
+          "quantity": 2
+        },
+        {
+          "id": "10",
+          "description": "grams",
+          "name": "chicken",
+          "quantity": 150
+        },
+        {
+          "id": "6",
+          "description": "grams",
+          "name": "lettuce",
+          "quantity": 20
+        },
+        {
+          "id": "14",
+          "description": "grams",
+          "name": "mayo",
+          "quantity": 20
+        },
+        {
+          "id": "9",
+          "description": "grams",
+          "name": "cheese",
+          "quantity": 20
+        },
+        {
+          "id": "4",
+          "description": "grams",
+          "name": "tomato",
+          "quantity": 40
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "name": "Fish Burger",
+      "description": "A homemade fish burger with a crunchy crumb, healthy and packed with flavour",
+      "ingredients": [
+        {
+          "id": "3",
+          "description": "units",
+          "name": "bun",
+          "quantity": 2
+        },
+        {
+          "id": "11",
+          "description": "grams",
+          "name": "fish",
+          "quantity": 150
+        },
+        {
+          "id": "6",
+          "description": "grams",
+          "name": "lettuce",
+          "quantity": 20
+        },
+        {
+          "id": "14",
+          "description": "grams",
+          "name": "mayo",
+          "quantity": 30
+        },
+        {
+          "id": "4",
+          "description": "grams",
+          "name": "tomato",
+          "quantity": 20
+        },
+        {
+          "id": "12",
+          "description": "ml",
+          "name": "fish sauce",
+          "quantity": 50
+        }
+      ]
+    }
+  ],
+  "ingredient": [
+    {
+      "id": "1",
+      "name": "pickles",
+      "quantity": 300,
+      "description": "grams"
+    },
+    {
+      "id": "2",
+      "name": "onion",
+      "quantity": 500,
+      "description": "grams"
+    },
+    {
+      "id": "3",
+      "name": "bun",
+      "quantity": 30,
+      "description": "units"
+    },
+    {
+      "id": "4",
+      "name": "tomato",
+      "quantity": 500,
+      "description": "grams"
+    },
+    {
+      "id": "5",
+      "name": "ketchup",
+      "quantity": 500,
+      "description": "grams"
+    },
+    {
+      "id": "6",
+      "name": "lettuce",
+      "quantity": 500,
+      "description": "grams"
+    },
+    {
+      "id": "7",
+      "name": "egg",
+      "quantity": 20,
+      "description": "units"
+    },
+    {
+      "id": "8",
+      "name": "beef",
+      "quantity": 500,
+      "description": "grams"
+    },
+    {
+      "id": "9",
+      "name": "cheese",
+      "quantity": 250,
+      "description": "grams"
+    },
+    {
+      "id": "10",
+      "name": "chicken",
+      "quantity": 500,
+      "description": "grams"
+    },
+    {
+      "id": "11",
+      "name": "fish",
+      "quantity": 500,
+      "description": "grams"
+    },
+    {
+      "id": "12",
+      "name": "fish sauce",
+      "quantity": 200,
+      "description": "ml"
+    },
+    {
+      "id": "13",
+      "name": "mustard",
+      "quantity": 300,
+      "description": "grams"
+    },
+    {
+      "id": "14",
+      "name": "mayo",
+      "quantity": 300,
+      "description": "grams"
+    }
+  ],
+  "purchase": [
+    {
+      "burger_id": "7",
+      "customer_name": "Mary Williams"
+    },
+    {
+      "burger_id": "8",
+      "customer_name": "John Taylor"
+    },
+    {
+      "burger_id": "9",
+      "customer_name": "Simon Muller"
+    },
+    {
+      "burger_id": "7",
+      "customer_name": "Suzy Jones"
+    }
+  ]
+}

@@ -1,0 +1,21 @@
+.ingredients-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 30px;
+  justify-content: space-around;
+  align-content: center;
+  height: 60vh;
+}
+
+.ingredient-items {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+}
+
+.ingredients-list {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: 30px;
+}

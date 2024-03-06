@@ -1,0 +1,63 @@
+/* .form-group {
+  padding: 20px;
+  border: 1px solid black;
+  width: 70%;
+  border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+  min-width: 90%;
+  gap: 15px;
+}
+
+.form-control {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+}
+
+.form-control label {
+  display: block;
+  color: black;
+}
+
+.form-control input {
+  padding: 10px;
+  width: 100%;
+  border: 1px solid gray;
+  border-radius: 5px;
+}
+
+.ingredient-form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: 30px;
+} */
+
+.custom-select {
+  width: 100%;
+  position: relative;
+}
+
+.custom-select::before,
+.custom-select::after {
+  --size: 0.3rem;
+  position: absolute;
+  content: "";
+  right: 1rem;
+  pointer-events: none;
+}
+
+.custom-select::before {
+  border-left: var(--size) solid transparent;
+  border-right: var(--size) solid transparent;
+  border-bottom: var(--size) solid black;
+  top: 60%;
+}
+
+.custom-select::after {
+  border-left: var(--size) solid transparent;
+  border-right: var(--size) solid transparent;
+  border-top: var(--size) solid black;
+  top: 70%;
+}

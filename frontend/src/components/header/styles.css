@@ -1,0 +1,23 @@
+.navbar {
+  display: flex;
+  gap: 50px;
+  align-items: center;
+  background-color: #000033;
+  color: whitesmoke;
+  padding: 20px 20px;
+}
+
+.navbar-items {
+  display: flex;
+  justify-content: flex-start;
+  gap: 20px;
+  background-color: inherit;
+  color: inherit;
+}
+
+.logo {
+  font-size: 20px;
+  font-weight: bold;
+  cursor: pointer;
+  color: lightsteelblue;
+}

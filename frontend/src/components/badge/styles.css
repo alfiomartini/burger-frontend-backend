@@ -1,0 +1,17 @@
+.badge-container {
+  padding: 5px 10px;
+  border-radius: 8px;
+  background-color: lightsteelblue;
+  color: black;
+  text-align: center;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+}
+
+.badge-icons {
+  display: flex;
+  gap: 10px;
+}

@@ -1,0 +1,18 @@
+# run this file as: 'docker compose up'
+services:
+  web:
+    build:
+      context: .
+    environment:
+      # this is needed for hot reload (at least in windows)
+      - CHOKIDAR_USEPOLLING=true
+
+    ports:
+      - 5174:5174
+
+    volumes:
+      - .:/app
+      - react-burger:/app/node_modules
+
+volumes:
+  react-burger:
