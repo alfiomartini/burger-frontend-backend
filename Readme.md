@@ -15,7 +15,7 @@ The frontend is written with React and typescript, while the backend is written 
 
 ### Root Project Folder
 
-- `docker compose up` (or `docker compose up --force-recreate`): this creates the images and runs all the necessary containers. I recommend not to use _detached mode_, so you can verify in the terminal when the api server and the frontend are running. The api server runs at `localhost:5500` and the frontend at `localhost:5174`. The containers are dependent on each other: database &rarr; api &rarr; frontend, as specified in the docker compose yaml file. This file uses the `DockerFile`'s defined in the frontend and backend folders.
+- `docker compose up` (or `docker compose up --force-recreate`): this creates the images and runs all the necessary containers. I recommend not to use _detached mode_, so you can verify in the terminal when the api server and the frontend are running. The api server runs at `localhost:5500` and the frontend at `localhost:5174`. The containers are dependent on each other: _database_ &larr; _api_ &larr; _frontend_ (where _x_ &larr; _y_ **means** _y_ <u>depends</u> on _x_), as specified in the docker compose yaml file. This file uses the `DockerFile`'s defined in the frontend and backend folders.
 - `docker compose stop`, `docker compose down`, `docker compose down -v`: depending on what you want to do.
 
 ### Frontend Folder
