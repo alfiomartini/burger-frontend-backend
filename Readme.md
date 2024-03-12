@@ -22,10 +22,22 @@ The frontend is written with React and typescript, while the backend is written 
 
 ### Database Model
 
-The database is implemented with MySQL 8.3 and the ER model files can be found in the [_database folder_](./backend/src/database/er-model/).
+- The database is implemented with MySQL 8.3 and the ER model files can be found in the [_database folder_](./backend/src/database/er-model/).
 
 <p align="center">
    <img src="./backend/src/database/er-model/burger-app.drawio.png" alt="ER Model" style="height:300px; width:600px;">
+</p>
+
+- Using the a SQL client like [DBeaver](https://dbeaver.io/) you can easily connect to the MySQL database container (at PORT 3307). See image below:
+
+<p align="center">
+   <img src="./images/dbeaver-burgerdb-config.png" alt="burger-app db" style="height:300px; width:600px;">
+</p>
+
+- During the connection, if you receive an error message like `Public Key Retrieval is not allowed`, set this property (under connection settings) to be true. See image below:
+
+<p align="center">
+   <img src="./images/dbeaver-publick-key-retrieval.png" alt="burger-app db" style="height:300px; width:600px;">
 </p>
 
 ## Available scripts
