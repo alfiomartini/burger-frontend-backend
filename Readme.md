@@ -16,9 +16,17 @@ The frontend is written with React and typescript, while the backend is written 
 ### Open API specification
 
 - The open api specification of the currently implemented endpoints is defined in the [`server.yaml`](./backend/server.yaml).
-- In VSCode, with the [OpenAPI Editor](https://marketplace.visualstudio.com/items?itemName=42Crunch.vscode-openapi) installed, you can preview the open api specification by clicking on the file and clicking and then in the preview button, on the upper right corner of the editor.
+- In VSCode, with the [OpenAPI Editor](https://marketplace.visualstudio.com/items?itemName=42Crunch.vscode-openapi) installed, you can preview the open api specification by clicking on the file and then clicking on the _preview_ button, on the upper right corner of the editor.
 
-### Database ER Diagram
+<p align="center"><img src="./images/backend-open-api.png" alt="open api spec" style="height:400px; width:500px;"></p>
+
+### Database Model
+
+The database is implemented with MySQL 8.3 and the ER model files can be found in the [_database folder_](./backend/src/database/er-model/).
+
+<p align="center">
+   <img src="./backend/src/database/er-model/burger-app.drawio.png" alt="ER Model" style="height:300px; width:600px;">
+</p>
 
 ## Available scripts
 
@@ -41,3 +49,5 @@ The frontend is written with React and typescript, while the backend is written 
 ### Todo List
 
 - At the moment only the CRUD operations for _ingredients_ are implemented in the front and backend.
+- Frontend/Backend: CRUD for new burgers (lunches)
+- Frontend/Backend: CRUD for new orders (lunches)
