@@ -2,7 +2,7 @@
 FROM node:20-alpine
 
 # set the working directory to /app
-WORKDIR /app
+WORKDIR /node_app
 
 # copy package.json and package-lock.json to the working directory
 # This is done before copying the rest of the files to take advantage of Docker’s cache

@@ -32,8 +32,8 @@ services:
       - CHOKIDAR_USEPOLLING=true
 
     volumes:
-      - ./backend:/app
-      - express-burger:/app/node_modules
+      - ./backend:/node_app
+      - express-burger:/node_app/node_modules
 
     networks:
       - mynetwork
