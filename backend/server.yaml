@@ -1,10 +1,10 @@
 openapi: 3.0.3
 info:
-  title: Swagger Burger App
+  title: Swagger Burger Grill
   description: This is a server with endpoints for _ingredients_, _burgers_ types and related _purchases_.
   version: 1.0.0
 servers:
-  - url: http://localhost:4500
+  - url: http://localhost:5500
 tags:
   - name: ingredients
     description: CRUD operations on _ingredients_
@@ -79,7 +79,7 @@ paths:
       tags:
         - ingredients
       summary: remove a particular ingredient defined by the parameter id
-      description: delete the indgredient denoted by the parameter id
+      description: delete the ingredient denoted by the parameter id
       parameters:
         - name: id
           in: path

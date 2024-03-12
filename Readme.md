@@ -11,6 +11,15 @@ This is an application that supports the following functionalities:
 
 The frontend is written with React and typescript, while the backend is written with node/express/typescript. We use MySQL as a database to provide persistence for all the relevant data. The application is fully containerized with Docker, with separate containers for the frontend, node/express api and database MySQL server. These containers are fully defined in the `compose.yaml` file located in the root folder of the project.
 
+## Node api backend endpoints
+
+### Open API specification
+
+- The open api specification of the currently implemented endpoints is defined in the [`server.yaml`](./backend/server.yaml).
+- In VSCode, with the [OpenAPI Editor](https://marketplace.visualstudio.com/items?itemName=42Crunch.vscode-openapi) installed, you can preview the open api specification by clicking on the file and clicking and then in the preview button, on the upper right corner of the editor.
+
+### Database ER Diagram
+
 ## Available scripts
 
 ### Root Project Folder
