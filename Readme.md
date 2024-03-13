@@ -9,7 +9,7 @@ This is an application that supports the following functionalities:
 
 ## Implementation
 
-The complete project is comprised of two main folders, _frontend_ and _backend_, representing naturally the _client_ and the _server_ side of the application. They project was originally developed in two separate repositories ([here](https://github.com/alfiomartini/burgers-frontend) and [there](https://github.com/alfiomartini/burgers-backend)), but they are now significantly outdated.
+The complete project is comprised of two main folders, _frontend_ and _backend_, representing naturally the _client_ and the _server_ side of the application. The project was originally developed in two separate repositories ([here](https://github.com/alfiomartini/burgers-frontend) and [there](https://github.com/alfiomartini/burgers-backend)), but they are now significantly outdated.
 The frontend is written with React and typescript, while the backend is written with node/express/typescript. We use MySQL as a database to provide persistence for all the relevant data. The application is fully containerized with Docker, with separate containers for the frontend, node/express api and database MySQL server. These containers are fully defined in the `compose.yaml` file located in the root folder of the project.
 
 ## Node api backend endpoints
