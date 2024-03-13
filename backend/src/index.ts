@@ -12,7 +12,7 @@ app.use(bodyParser.json());
 
 app.use("/ingredient", ingredientRoutes);
 
-app.get("/", (req: Request, res: Response) => res.send("Welcome to the Burger App API"));
+app.get("/", (req: Request, res: Response) => res.send("Welcome to the Burger Grill API"));
 app.all("*", (req: Request, res: Response) =>
   res.send("You have tried reaching a route that does not exist"),
 );

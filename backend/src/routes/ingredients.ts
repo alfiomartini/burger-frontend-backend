@@ -1,5 +1,4 @@
 import express from "express";
-import { connection } from "../database/client";
 import {
   getAllIngredients,
   postIngredient,
@@ -10,14 +9,14 @@ import {
 
 const router = express.Router();
 
-router.get("/", getAllIngredients(connection));
+router.get("/", getAllIngredients);
 
-router.post("/", postIngredient(connection));
+router.post("/", postIngredient);
 
-router.get("/:id", getIngredientId(connection));
+router.get("/:id", getIngredientId);
 
-router.delete("/:id", deleteIngredientId(connection));
+router.delete("/:id", deleteIngredientId);
 
-router.patch("/:id", patchIngredientId(connection));
+router.patch("/:id", patchIngredientId);
 
 export default router;
