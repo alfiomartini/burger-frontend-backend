@@ -2,12 +2,41 @@ import mysql, { PoolOptions } from "mysql2/promise";
 import "dotenv/config";
 
 // Create the connection pool. The pool-specific settings are the defaults
-// const PORT = process.env.MYSQL_PORT as number | undefined;
+
+let user: string | undefined,
+  host: string | undefined,
+  password: string | undefined,
+  port: number | undefined;
+
+const environment = process.env.NODE_ENV;
+console.log("environment", environment);
+
+if (environment === "aws") {
+  user = process.env.MYSQL_AWS_USER;
+  host = process.env.MYSQL_AWS_HOST;
+  password = process.env.MYSQL_AWS_PWD;
+  port = parseInt(process.env.MYSQL_AWS_PORT || "3306");
+} else if (environment === "docker") {
+  user = process.env.MYSQL_USER;
+  host = process.env.MYSQL_DOCKER_HOST;
+  password = process.env.MYSQL_PWD;
+  port = parseInt(process.env.MYSQL_DOCKER_PORT || "3306");
+} else {
+  // localhost
+  user = process.env.MYSQL_USER;
+  host = process.env.MYSQL_HOST;
+  password = process.env.MYSQL_PWD;
+  port = parseInt(process.env.MYSQL_LOCALHOST_PORT || "3306");
+}
+
+console.log(user, host, password, port);
+
 const access: PoolOptions = {
-  host: "mysql-db",
-  user: process.env.MYSQL_USER,
+  host: host,
+  user: user,
   database: process.env.MYSQL_DB,
-  password: process.env.MYSQL_PWD,
+  password: password,
+  port: port,
   waitForConnections: true,
   connectionLimit: 10,
   maxIdle: 10, // max idle connections, the default value is the same as `connectionLimit`

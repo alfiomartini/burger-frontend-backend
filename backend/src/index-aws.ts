@@ -11,6 +11,7 @@ app.use(cors());
 
 app.use(bodyParser.json());
 
+console.log("Start  database burger_app set up");
 InitDatabase();
 
 app.use("/ingredient", ingredientRoutes);
