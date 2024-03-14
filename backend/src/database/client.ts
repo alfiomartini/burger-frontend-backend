@@ -29,8 +29,6 @@ if (environment === "aws") {
   port = parseInt(process.env.MYSQL_LOCALHOST_PORT || "3306");
 }
 
-console.log(user, host, password, port);
-
 const access: PoolOptions = {
   host: host,
   user: user,
