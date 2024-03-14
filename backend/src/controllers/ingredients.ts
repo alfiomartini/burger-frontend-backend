@@ -1,7 +1,8 @@
-import { Pool, ResultSetHeader, RowDataPacket } from "mysql2/promise";
+import { ResultSetHeader, RowDataPacket } from "mysql2/promise";
+import { connection } from "../database/client";
 import { Request, Response } from "express";
 import { Ingredient, WeakIngredient } from "../interfaces/types";
-export const getAllIngredients = (connection: Pool) => async (req: Request, res: Response) => {
+export const getAllIngredients = async (req: Request, res: Response) => {
   try {
     const [results] = await connection.query<RowDataPacket[]>("select * from ingredient");
     if (Array.isArray(results)) {
@@ -21,7 +22,7 @@ export const getAllIngredients = (connection: Pool) => async (req: Request, res:
   }
 };
 
-export const postIngredient = (connection: Pool) => async (req: Request, res: Response) => {
+export const postIngredient = async (req: Request, res: Response) => {
   try {
     const { name, quantity, description }: Ingredient = req.body;
     const [result] = await connection.query(
@@ -41,7 +42,7 @@ export const postIngredient = (connection: Pool) => async (req: Request, res: Re
   }
 };
 
-export const getIngredientId = (connection: Pool) => async (req: Request, res: Response) => {
+export const getIngredientId = async (req: Request, res: Response) => {
   try {
     const { id } = req.params;
     const [results] = await connection.query("select * from ingredient where ing_id = ?", [id]);
@@ -60,7 +61,7 @@ export const getIngredientId = (connection: Pool) => async (req: Request, res: R
   }
 };
 
-export const deleteIngredientId = (connection: Pool) => async (req: Request, res: Response) => {
+export const deleteIngredientId = async (req: Request, res: Response) => {
   try {
     const { id } = req.params;
     await connection.query("delete from ingredient where ing_id = ?", [id]);
@@ -72,7 +73,7 @@ export const deleteIngredientId = (connection: Pool) => async (req: Request, res
   }
 };
 
-export const patchIngredientId = (connection: Pool) => async (req: Request, res: Response) => {
+export const patchIngredientId = async (req: Request, res: Response) => {
   try {
     const { id } = req.params;
     const { name, quantity, description }: WeakIngredient = req.body;

@@ -2,6 +2,7 @@ import express, { Request, Response } from "express";
 import cors from "cors";
 import bodyParser from "body-parser";
 import ingredientRoutes from "./routes/ingredients";
+import { InitDatabase } from "./database/initdb";
 
 const app = express();
 const PORT = process.env.PORT || 5500;
@@ -9,6 +10,9 @@ const PORT = process.env.PORT || 5500;
 app.use(cors());
 
 app.use(bodyParser.json());
+
+console.log("Start  database burger_app set up");
+InitDatabase();
 
 app.use("/ingredient", ingredientRoutes);
 
