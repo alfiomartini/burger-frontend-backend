@@ -56,6 +56,10 @@ The frontend is written with _React_ and _Typescript_, while the backend is writ
   - (alternative way) you must run the script `npm run json:server`, that mocks the REST API using _json server_. This api is served at `localhost:4500`. This assumes that you make the necessary changes written in the comments of the file `frontend/src/api/httpClient.ts`.
 - other scripts for formatting, linting and building.
 
+<p align="center">
+   <img src="./images/frontend-ingredients.png" alt="burger-app db" style="height:300px; width:600px;">
+</p>
+
 ### Backend Folder
 
 - `npm run dev`: starts the node api version that connects with the MySQL database running in another container. This script is automatically called by docker via `docker compose up`, and it is defined in corresponding [Dockerfile](./backend/Dockerfile), in the backend folder.
