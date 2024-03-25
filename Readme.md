@@ -47,7 +47,7 @@ The frontend is written with _React_ and _Typescript_, while the backend is writ
    <img src="./images/dbeaver-public-key-retrieval.png" alt="burger-app db" style="height:300px; width:600px;">
 </p>
 
-### Frontend Folder
+### Frontend Folder (via corresponding [package.json](./frontend/package.json))
 
 - `npm test`: to run all test written with _jest_ and _react testing library_.
 - `nmp run dev:docker`: starts the React frontend (at `localhost: 5174`) that runs in the container. This script is automatically called by docker via `docker compose up`, and it is defined in corresponding [Dockerfile](./frontend/Dockerfile), in the frontend folder.
@@ -61,15 +61,15 @@ The frontend is written with _React_ and _Typescript_, while the backend is writ
    <img src="./images/frontend-ingredients.png" alt="burger-app db" style="height:300px; width:600px;">
 </p>
 
-### Backend Folder
+### Backend Folder (via corresponding [package.json](./backend/package.json))
 
 - `npm run dev`: starts the node api version that connects with the MySQL database running in another container. This script is automatically called by docker via `docker compose up`, and it is defined in corresponding [Dockerfile](./backend/Dockerfile), in the backend folder.
 - `nmp run dev:aws`: starts the node api version that connects with the public AWS MySQL database. This database runs at port `3308`, just in case you want to connect a SQL client to it. Some observations with respect to this script:
   - The MySQL database instance for this script was created only for testing purposes, and it was deleted.
   - Thus, in order to run this script you will have to create your own MySQL RDS database on AWS.
   - The two images below show the parameters that I used for testing purposes.
-  - The security group for the instance allowed all IP addresses to accept the instance.
-  - The two subnets comprising the db subnet group were public subnets.
+  - The security group for the instance allowed all IP addresses to connect to the instance.
+  - The two subnets comprising the db subnet group are public subnets.
   - The db endpoint is the value of the environment variable `MYSQL_AWS_HOST`.
 
 <p align="center">
