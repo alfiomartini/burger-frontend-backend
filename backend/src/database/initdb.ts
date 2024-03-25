@@ -2,9 +2,9 @@ import { connection } from "./client";
 
 export async function InitDatabase() {
   try {
-    await connection.query(`
-      DROP DATABASE IF EXISTS burger_app
-    `);
+    // await connection.query(`
+    //   DROP DATABASE IF EXISTS burger_app
+    // `);
 
     await connection.query(`
     CREATE DATABASE IF NOT EXISTS burger_app
@@ -15,7 +15,7 @@ export async function InitDatabase() {
     await connection.query(`
       CREATE TABLE IF NOT exists ingredient(
           ing_id INT AUTO_INCREMENT,
-          name VARCHAR(30) NOT NULL,
+          name VARCHAR(30) NOT NULL UNIQUE,
           quantity INT NOT NULL,
           description VARCHAR(150),
           PRIMARY KEY (ing_id)
@@ -24,7 +24,7 @@ export async function InitDatabase() {
     await connection.query(`
       CREATE TABLE IF NOT EXISTS burger(
         burger_id INT AUTO_INCREMENT,
-        name VARCHAR(20) NOT NULL,
+        name VARCHAR(20) NOT NULL UNIQUE,
         description VARCHAR(250) NOT NULL,
         PRIMARY KEY (burger_id)
       )`);
@@ -122,6 +122,11 @@ export async function InitDatabase() {
           (2, 'John Taylor'),
           (3, 'Simon Miller'),
           (1, 'Suzy Jones')
+    `);
+
+    // remove additional inserts in case of repeated db initialization
+    await connection.query(`
+      DELETE from purchase where purchase_id > 4;
     `);
     console.log("Finish  database burger_app set up");
   } catch (error) {

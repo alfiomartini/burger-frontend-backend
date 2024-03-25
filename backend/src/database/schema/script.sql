@@ -5,7 +5,7 @@ USE burger_app;
 -- Tables
 CREATE TABLE IF NOT exists ingredient(
   ing_id INT AUTO_INCREMENT,
-  name VARCHAR(30) NOT NULL,
+  name VARCHAR(30) NOT NULL UNIQUE,
   quantity INT NOT NULL,
   description VARCHAR(150),
   PRIMARY KEY (ing_id)
@@ -15,7 +15,7 @@ CREATE TABLE IF NOT exists ingredient(
 
 CREATE TABLE IF NOT EXISTS burger(
   burger_id INT AUTO_INCREMENT,
-  name VARCHAR(20) NOT NULL,
+  name VARCHAR(20) NOT NULL UNIQUE,
   description VARCHAR(250) NOT NULL,
   PRIMARY KEY (burger_id)
 );
@@ -112,3 +112,7 @@ VALUES
    (2, 'John Taylor'),
    (3, 'Simon Miller'),
    (1, 'Suzy Jones');
+
+
+-- remove additional inserts in case of repeated db initialization
+DELETE from purchase where purchase_id > 4;
