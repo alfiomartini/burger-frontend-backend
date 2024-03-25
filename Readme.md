@@ -68,8 +68,8 @@ The frontend is written with _React_ and _Typescript_, while the backend is writ
   - The MySQL database instance for this script was created only for testing purposes, and it was deleted.
   - Thus, in order to run this script you will have to create your own MySQL RDS database on AWS.
   - The two images below show the parameters that I used for testing purposes.
-  - The security group for the instance allowed all IP addresses to accept the instance.
-  - The two subnets comprising the db subnet group were public subnets.
+  - The security group for the instance allowed all IP addresses to connect to the instance.
+  - The two subnets comprising the db subnet group are public subnets.
   - The db endpoint is the value of the environment variable `MYSQL_AWS_HOST`.
 
 <p align="center">
