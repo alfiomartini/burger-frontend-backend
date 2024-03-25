@@ -51,9 +51,10 @@ The frontend is written with _React_ and _Typescript_, while the backend is writ
 
 - `npm test`: to run all test written with _jest_ and _react testing library_.
 - `nmp run dev:docker`: starts the React frontend (at `localhost: 5174`) that runs in the container. This script is automatically called by docker via `docker compose up`, and it is defined in corresponding [Dockerfile](./frontend/Dockerfile), in the frontend folder.
-- `npm run dev`: in case you want to run the frontend alone (at `localhost:5173`), outside the docker environment. In this case, to access the database, there are two options:
-  - (suggested way) you must run the script `nmp run dev:aws` (in the _backend_ folder) that starts the node api version that connects with the public AWS MySQL database. This database runs at port `3308`, just in case you want to connect a SQL client to it.
-  - (alternative way) you must run the script `npm run json:server`, that mocks the REST API using _json server_. This api is served at `localhost:4500`. This assumes that you make the necessary changes written in the comments of the file `frontend/src/api/httpClient.ts`.
+- `npm run dev`: in case you want to run the frontend alone (at `localhost:5173`), outside the docker environment. In this case, to access the database, do the following:
+
+  - run the script `nmp run dev:aws` (in the _backend_ folder) which starts the node api version (at port `5600`) that connects with the public AWS MySQL database. This database runs at port `3308`, just in case you want to connect a SQL client to it.
+
 - other scripts for formatting, linting and building.
 
 <p align="center">

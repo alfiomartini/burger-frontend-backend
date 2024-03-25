@@ -16,7 +16,7 @@ RUN yarn
 # copy the rest of the files to the working directory
 COPY . .
 
-# expose port 5174 to tell Docker that the container listens on the specified network ports at runtime
+# expose port 5174 to tell Docker that the container listens on the specified network port at runtime
 EXPOSE 5174
 
 # command to run the app

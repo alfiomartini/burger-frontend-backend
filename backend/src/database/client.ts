@@ -8,7 +8,7 @@ let user: string | undefined,
   password: string | undefined,
   port: number | undefined;
 
-const environment = process.env.NODE_ENV;
+const environment = process.env.BACKEND_ENV;
 console.log("environment", environment);
 
 if (environment === "aws") {
