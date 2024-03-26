@@ -6,7 +6,7 @@
   "scripts": {
     "dev": "cross-env BACKEND_ENV=docker  nodemon src/index.ts",
     "dev:aws": "cross-env BACKEND_ENV=aws PORT=5600 nodemon src/index-aws.ts",
-    "start": "node dist/index.js",
+    "start": "cross-env BACKEND_ENV=aws PORT=5600 node dist/index-aws.js",
     "build": "run-s transpile  fix",
     "transpile": "npx tsc",
     "fix": "fix-esm-import-path --process-import-type dist/index.js",
