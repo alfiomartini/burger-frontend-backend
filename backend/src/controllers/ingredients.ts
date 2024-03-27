@@ -86,5 +86,6 @@ export const patchIngredientId = async (req: Request, res: Response) => {
     res.status(200).json({ id, name, quantity, description });
   } catch (error) {
     console.log("patch ingredient/id", error);
+    res.status(500).json(`Internal server error`);
   }
 };
